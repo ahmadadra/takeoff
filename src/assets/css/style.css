@@ -211,6 +211,41 @@ h6 {
   }
 }
 
+section.portfolio .portfolio-container .fullImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+section.portfolio .portfolio-container .escape {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  display: block;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+section.portfolio .portfolio-container .fullImage.active {
+  display: block;
+}
+
+section.portfolio .portfolio-container .fullImage img {
+  display: inline-block;
+  max-width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -47%);
+  aspect-ratio: 4 / 3;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -355,6 +390,10 @@ h6 {
     right: 10px;
     top: 62px;
     z-index: 10000000;
+  }
+
+  .topbar-scrolled~header .mobile-nav-toggle {
+    top: 21px !important;
   }
 
   .nav_mobile {
